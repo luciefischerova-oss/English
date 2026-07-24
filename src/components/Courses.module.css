@@ -1,5 +1,5 @@
 .courses {
-  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 50%, #f3f4f6 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f0f9ff 100%);
   position: relative;
 }
 
@@ -32,6 +32,26 @@
   height: 100%;
   animation: slideUp 0.6s ease-out forwards;
   opacity: 0;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.courseCard.featured {
+  border: 2px solid var(--primary-blue);
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.02);
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .courseHeader {
@@ -47,7 +67,7 @@
 }
 
 .age {
-  background-color: #dbeafe;
+  background-color: var(--primary-lighter);
   color: var(--primary-blue);
   padding: 6px 12px;
   border-radius: 6px;
@@ -83,7 +103,7 @@
 }
 
 .featuresList svg {
-  color: var(--success);
+  color: var(--primary-blue);
   flex-shrink: 0;
 }
 
@@ -97,8 +117,8 @@
 }
 
 .price {
-  font-weight: 600;
-  font-size: 1.125rem;
+  font-weight: 700;
+  font-size: 1.25rem;
   color: var(--primary-blue);
   margin: 0;
 }
@@ -112,6 +132,10 @@
   .courseGrid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .courseCard.featured {
+    transform: scale(1);
   }
 
   .header {

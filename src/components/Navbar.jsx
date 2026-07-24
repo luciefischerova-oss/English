@@ -10,10 +10,11 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { label: 'Domů', href: '#home' },
-    { label: 'Kurzy', href: '#courses' },
-    { label: 'O mně', href: '#about' },
-    { label: 'Kontakt', href: '#contact' },
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Courses', href: '#courses' },
+    { label: 'Testimonials', href: '#testimonials' },
+    { label: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -22,7 +23,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className={styles.logo}>
           <span className={styles.logoIcon}>🇬🇧</span>
-          <span className={styles.logoText}>Angličtina s Lucií</span>
+          <span className={styles.logoText}>Lucia's English</span>
         </div>
 
         {/* Desktop Menu */}
@@ -37,9 +38,9 @@ const Navbar = () => {
         </ul>
 
         {/* CTA Button */}
-        <button className="btn btn-primary btn-sm">
-          Rezervovat lekci
-        </button>
+        <a href="#contact" className="btn btn-primary btn-sm">
+          Get Started
+        </a>
 
         {/* Mobile Menu Toggle */}
         <button className={styles.mobileToggle} onClick={toggleMenu}>
@@ -63,9 +64,9 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <button className="btn btn-primary" style={{ width: '100%', marginTop: '16px' }}>
-            Rezervovat lekci
-          </button>
+          <a href="#contact" className="btn btn-primary" style={{ width: '100%', marginTop: '16px', display: 'flex', justifyContent: 'center' }}>
+            Get Started
+          </a>
         </div>
       )}
     </nav>

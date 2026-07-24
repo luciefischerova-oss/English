@@ -1,5 +1,5 @@
 .contact {
-  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 50%, #f3f4f6 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f0f9ff 100%);
   position: relative;
 }
 
@@ -26,49 +26,51 @@
   align-items: flex-start;
 }
 
-.contactInfo {
+.contactMethods {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
-.infoCard {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 24px;
-  background-color: var(--white);
-  border-radius: 12px;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
-}
-
-.infoCard:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
-.infoIcon {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #2563EB 0%, #3b82f6 100%);
+.contactButton {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.contactButton span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contactButton strong {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.contactButton small {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.emailButton {
+  background-color: var(--primary-blue);
   color: white;
-  flex-shrink: 0;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+  text-decoration: none;
+  border: none;
 }
 
-.infoCard h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.125rem;
-}
-
-.infoCard p {
-  margin: 0;
-  color: var(--text-light);
-  font-size: 0.95rem;
+.emailButton:hover {
+  background-color: var(--primary-dark);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
 }
 
 .contactForm {
@@ -98,6 +100,7 @@
   font-size: 0.95rem;
   color: var(--text-dark);
   transition: all 0.3s ease;
+  background-color: var(--white);
 }
 
 .formGroup input:focus,
@@ -141,11 +144,24 @@
   .header h2 {
     font-size: 1.875rem;
   }
+
+  .contactMethods {
+    order: 2;
+  }
+
+  .contactForm {
+    order: 1;
+  }
 }
 
 @media (max-width: 480px) {
   .contactWrapper {
     gap: 30px;
+  }
+
+  .contactButton {
+    padding: 16px 20px;
+    font-size: 0.9rem;
   }
 
   .header p {

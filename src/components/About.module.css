@@ -1,5 +1,5 @@
 .about {
-  background-color: var(--white);
+  background-color: var(--light-gray);
   position: relative;
 }
 
@@ -16,7 +16,7 @@
 
 .imagePlaceholder {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 5;
   border-radius: 16px;
   background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
   display: flex;
@@ -25,6 +25,7 @@
   box-shadow: var(--shadow-lg);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
 .imagePlaceholder::before {
@@ -38,17 +39,17 @@
   pointer-events: none;
 }
 
-.emoji {
-  font-size: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.aboutImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .textContent {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
 .textContent h2 {
@@ -61,31 +62,30 @@
   color: var(--text-light);
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin: 24px 0;
-  padding: 24px;
-  background-color: var(--light-gray);
-  border-radius: 12px;
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.stat {
-  text-align: center;
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--white);
+  border-radius: 8px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
 }
 
-.stat h4 {
-  font-size: 1.75rem;
-  font-weight: 700;
+.checkIcon {
   color: var(--primary-blue);
-  margin: 0 0 8px 0;
+  flex-shrink: 0;
 }
 
-.stat p {
-  margin: 0;
-  font-size: 0.875rem;
-  color: var(--text-light);
+.highlight span {
+  color: var(--text-dark);
+  font-weight: 500;
 }
 
 /* Responsive Design */
@@ -95,13 +95,8 @@
     gap: 40px;
   }
 
-  .stats {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .stat h4 {
-    font-size: 1.5rem;
+  .imagePlaceholder {
+    aspect-ratio: 3 / 4;
   }
 }
 
@@ -110,7 +105,7 @@
     gap: 30px;
   }
 
-  .stats {
-    padding: 20px 16px;
+  .imagePlaceholder {
+    aspect-ratio: 1 / 1.2;
   }
 }

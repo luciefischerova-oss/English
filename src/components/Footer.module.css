@@ -1,6 +1,6 @@
 .footer {
-  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-  color: #f3f4f6;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #f1f5f9;
   padding: 60px 0 20px;
   position: relative;
   overflow: hidden;
@@ -38,7 +38,7 @@
 }
 
 .footerSection p {
-  color: #d1d5db;
+  color: #cbd5e1;
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -53,7 +53,7 @@
 }
 
 .footerSection li a {
-  color: #d1d5db;
+  color: #cbd5e1;
   text-decoration: none;
   font-size: 0.95rem;
   transition: all 0.3s ease;
@@ -81,7 +81,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f3f4f6;
+  color: #f1f5f9;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -98,7 +98,7 @@
 }
 
 .footerBottom p {
-  color: #9ca3af;
+  color: #94a3b8;
   font-size: 0.875rem;
   margin: 0;
 }
