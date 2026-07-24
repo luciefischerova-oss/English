@@ -1,0 +1,17 @@
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:2rem;
+background:linear-gradient(135deg,#eff6ff,#ffffff);
+}
+h1{font-size:3.5rem;color:#1d4ed8;margin-bottom:1rem}
+p{font-size:1.2rem;max-width:650px;margin-bottom:2rem}
+button{
+background:#1d4ed8;color:white;border:none;
+padding:1rem 2rem;border-radius:999px;font-size:1rem;
+}
+button:hover{background:#163ea8}
